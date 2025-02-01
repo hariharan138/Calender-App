@@ -27,6 +27,7 @@ export function Calendar({ currentDate, events, onDateClick, moveEvent, categori
                 onClick={() => onDateClick(date)}
                 categories={categories}
               />
+              
             </div>
           );
         })

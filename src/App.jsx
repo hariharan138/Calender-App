@@ -7,7 +7,7 @@ import { getMonthData, getMonthYear } from './utils/dateUtils';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import { exportEvents } from './utils/exportUtils';
-
+import SplashCursor from './SplashCursor'
 export default function App() {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedDate, setSelectedDate] = useState(null);
@@ -99,6 +99,9 @@ export default function App() {
           moveEvent={moveEvent}
           categories={categories}
         />
+
+
+<SplashCursor />
         {selectedDate && (
           <div className="mt-6 space-y-4">
             <Button onClick={handleAddEvent} className="bg-purple-600 hover:bg-purple-700">Add Event</Button>
